@@ -1,0 +1,50 @@
+/*importing helpers*/
+@import "../helpers/mixins.scss";
+@import "../helpers/themeColors.scss";
+/*start styling the landing page*/
+.landing {
+  height: 100vh;
+  width: 100%;
+  background: url("../imgs/home_background.jpg") no-repeat;
+  background-size: cover;
+  .landing_text {
+    img {
+      width: 550px;
+      height: 250px;
+      margin-bottom: 0px;
+      margin-top: 150px;
+    }
+    p {
+      width: 400px;
+      font-size: 20px;
+      line-height: 30px;
+      margin-left: 22px;
+      margin-top: 0px;
+      margin-bottom: 30px;
+      color: var(--gray-text-color);
+    }
+    .landing_btn {
+      margin-left: 22px;
+    }
+  }
+}
+/*end styling the landing page*/
+/*start mediaqueries for the landing page*/
+@media screen and (max-width: 768px) {
+  .landing {
+    height: auto;
+    padding-bottom: 60px;
+    background-image: none;
+    background-color: #000000;
+    .landing_text {
+      img {
+        margin-top: 100px;
+        width: 80%;
+      }
+      p {
+        width: 80%;
+      }
+    }
+  }
+}
+/*start mediaqueries for the landing page*/

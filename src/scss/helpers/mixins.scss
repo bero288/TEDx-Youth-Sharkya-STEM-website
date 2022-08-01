@@ -1,0 +1,16 @@
+@mixin superscript {
+  vertical-align: super;
+  font-size: smaller;
+  font-weight: lighter;
+}
+@mixin centeringWithFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin capitalize {
+  text-transform: capitalize;
+}
+@mixin resetAnchor {
+  text-decoration: none;
+}

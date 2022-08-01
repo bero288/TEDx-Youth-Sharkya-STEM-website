@@ -1,0 +1,47 @@
+/*start styling the navbar*/
+.navbar {
+  position: absolute;
+  width: 100%;
+  margin-top: 0px !important;
+  padding: 0px;
+  .navbar-brand {
+    width: 250px;
+    height: 130px;
+    margin-right: 32%;
+    img {
+      width: inherit;
+      height: inherit;
+    }
+  }
+  .collapse {
+    .navbar-nav {
+      margin-bottom: 30px !important;
+      .nav-item {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+/*end styling the navbar*/
+/*start media query for the navbar*/
+@media screen and (max-width: 960px) {
+  .navbar {
+    background-color: #000000c4;
+    .navbar-brand {
+      margin-right: 20px;
+    }
+    .navbar-toggler {
+      margin-bottom: 12px !important;
+    }
+    .navbar-nav {
+      text-align: center;
+      width: 100%;
+      .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+}
+
+/*end media query for the navbar*/
