@@ -1,15 +1,18 @@
-@import "../helpers/themeColors.scss";
 @import "../helpers/mixins.scss";
+/*start styling the events*/
 .events {
   padding-top: 50px;
+  padding-bottom: 50px;
   background-color: var(--bg-color);
   .events_heading_container {
     h2 {
-      margin: 0px auto;
-      width: 10%;
-      border-bottom: 5px solid var(--red-color);
-      font-weight: bold;
+      @include underline;
       color: var(--text-color);
+      width: fit-content;
+      margin: 0px auto;
+      &::before {
+        background-color: var(--red-color);
+      }
     }
     img {
       width: 30%;
@@ -61,11 +64,22 @@
     }
   }
 }
+/*end styling the events*/
+/*start mediaqueries for the events section*/
 @media screen and (max-width: 960px) {
   .events {
     .events_heading_container {
       h2 {
         width: 21%;
+      }
+    }
+    .events_content_container {
+      .event {
+        .card_right_container {
+          .speaker {
+            width: 350px;
+          }
+        }
       }
     }
   }
@@ -77,7 +91,7 @@
         width: 20%;
       }
       img {
-        width: 65%;
+        width: 60%;
       }
     }
     .events_content_container {
@@ -95,3 +109,4 @@
     }
   }
 }
+/*end mediaqueries for the events section*/

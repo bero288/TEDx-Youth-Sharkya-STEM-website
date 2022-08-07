@@ -4,6 +4,12 @@
   --red-color: #ff2b06;
   --gray-text-color: #95a5a6;
   --bloody-red: rgba(112, 3, 6, 0.5);
+  --ticket-bg: rgba(112, 3, 6, 0.5);
+  --linear-gradient: linear-gradient(
+    90deg,
+    rgba(243, 226, 71, 0.5018382352941176) 44%,
+    rgba(243, 71, 71, 0.5046393557422969) 55%
+  );
 }
 .dark {
   --text-color: #fff;
@@ -11,4 +17,6 @@
   --red-color: #ff2b06;
   --gray-text-color: #95a5a6;
   --bloody-red: rgba(112, 3, 6, 0.5);
+  --ticket-bg: #ff2b06;
+  --linear-gradient: #000000;
 }

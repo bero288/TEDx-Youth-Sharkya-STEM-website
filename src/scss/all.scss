@@ -1,9 +1,12 @@
+@import "./plugins/icomoon.scss";
 @import "./helpers/typography.scss";
 @import "./partials/normalizations.scss";
 @import "./helpers/themeColors.scss";
-@import "./helpers/mixins.scss";
 @import "./partials/smallFramework.scss";
 @import "./layout/loader.scss";
 @import "./layout/navbar.scss";
 @import "./layout/landing.scss";
 @import "./layout/events.scss";
+@import "./layout/videos_tickets.scss";
+@import "./layout/about.scss";
+@import "./layout/footer.scss";

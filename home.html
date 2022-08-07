@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./imgs/favicon.png" rel="icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,10 +18,13 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <script src="../src/scripts/loader.js" defer></script>
+    <script src="./js/loader.js" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="./js/themeToggle.js" defer></script>
+    <script src="./js/videos.js" defer></script>
     <title>Home | TEDxYouth@SharkyaSTEM</title>
   </head>
-  <body class="dark">
+  <body>
     <div class="loader">
       <div class="loader_text_container">
         <p class="loader_text">
@@ -30,10 +34,10 @@
       </div>
       <div class="loader_spinner"></div>
     </div>
-    <div class="landing">
+    <div class="landing" id="landing">
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand">
+          <a href="./home.html#landing" class="navbar-brand">
             <img src="./imgs/TEDx_Sharkya_Logo.png" alt="TEDx Sharkya" />
           </a>
           <button
@@ -53,19 +57,38 @@
           >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">home</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./home.html#landing"
+                  >home</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">explore events</a>
+                <a class="nav-link active" href="./home.html#events"
+                  >explore events</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">tickets</a>
+                <a class="nav-link active" href="./home.html#tickets"
+                  >tickets</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">about us</a>
+                <a class="nav-link active" href="./home.html#about">about us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">contact us</a>
+                <a class="nav-link active" href="./home.html#contact"
+                  >contact us</a
+                >
+              </li>
+              <li class="nav-item toggler_container">
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label class="label" for="checkbox">
+                  <span class="icon-sun"></span>
+                  <span class="icon-moon"></span>
+                  <div class="ball"></div>
+                </label>
               </li>
             </ul>
           </div>
@@ -77,10 +100,12 @@
           TEDxyouth@Sharkya STEM is an independently organized TED-Event that
           aims to share new ideas with you.
         </p>
-        <a href="#" class="capitalize tedx_btn landing_btn">learn more</a>
+        <a href="./home.html#about" class="capitalize tedx_btn landing_btn"
+          >learn more</a
+        >
       </div>
     </div>
-    <div class="events">
+    <div class="events" id="events">
       <div class="events_heading_container text-center">
         <h2 class="events_heading capitalize">events</h2>
         <img src="./imgs/events_img.png" alt="events" />
@@ -115,5 +140,128 @@
         </div>
       </div>
     </div>
+    <div class="vidoes_and_ticket">
+      <div id="videos" class="container p-0">
+        <div class="center col">
+          <span class="header-text">Videos</span>
+          <img
+            class="img-fluid mt-4"
+            src="./imgs/videosPhoto.png"
+            alt="mobile video"
+          />
+          <div class="subtitle mt-5">Ideas to stir your curiosity</div>
+          <div class="speakers d-flex container center w-100 flex-wrap mt-3">
+            <div class="speaker m-1 my-0">
+              <img src="./imgs/speaker1.jpg" alt="speaker" />
+              <span class="video_show">show</span>
+            </div>
+            <div class="speaker m-1 my-0">
+              <img src="./imgs/speaker2.jpg" alt="speaker" />
+              <span class="video_show">show</span>
+            </div>
+            <div class="speaker m-1 my-0">
+              <img src="./imgs/speaker3.jpg" alt="speaker" />
+              <span class="video_show">show</span>
+            </div>
+            <div class="speaker m-1 my-0">
+              <img src="./imgs/speaker4.jpg" alt="speaker" />
+              <span class="video_show">show</span>
+            </div>
+            <div class="speaker m-1 my-0">
+              <img src="./imgs/speaker5.jpg" alt="speaker" />
+              <span class="video_show">show</span>
+            </div>
+            <div class="speaker m-1 my-0">
+              <img src="./imgs/speaker6.jpg" alt="speaker" />
+              <span class="video_show">show</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tickets" class="center w-100 col mt-5 p-0">
+        <span class="header-text">Tickets</span>
+        <div class="tickets-section col w-100">
+          <p class="tickets-text">Book your tickets now</p>
+          <img src="./imgs/tickets.png" alt="tickets" />
+          <button class="btn">
+            <a
+              href="https://l.facebook.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSeXCWrb6WwMtq2k7Z8pOqXvVEf_VnIWnLEFLgzhYjgm1M2CiQ%2Fviewform%3Fusp%3Dsf_link%26fbclid%3DIwAR1Q-TUGvQnRUtIkyeYZwuS9O99n_UopXTkmHqbfQjW4RwX3ycnrCQapEHQ&h=AT1OLxAmdTUTevmkUD8zLMAWSmzi8ZQzpLdoZ88zuKRU-9O1-MHStVw7rBByvkcqqaeOfmQTQIdBRRdRQo1OCBhhT99KQb9OqIF2GE08nYt4yCMsNe5hzoMflyUAz8WZ-jHA&__tn__=-UK-R&c[0]=AT1_2Rt3H_trZhlII3O4eDo4SojKAjEY-DEVlnB3ASxRs_g15wBL8vmjUXLr757JQUmvCDZ7_KQOMu_B2_VGBif2XkqzGJrdF2DGTyQNd34Q2pBzcb_u7LGXyrdzHeFjQMf-xpFee8GKW4P4a5V3zJyKz-jpFUd6uRxdc_lFb90woLP4Ky8rafUvHmafwDoUQ4bQOlSC"
+              target="_blank"
+              >Book</a
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="about center" id="about">
+      <span class="about_heading"
+        >About TED<span class="superScript">X</span> Sharkya</span
+      >
+      <p class="about_text text_left">
+        TED<span class="superScript">X</span>youth@Sharkya STEM is a grassroots
+        initiative, created in the spirit of TED’s overall mission to research
+        and discover “ideas worth spreading.” TEDx brings the spirit of TED to
+        local communities around the globe through TEDx events. These events are
+        organized by passionate individuals who seek to uncover new ideas and to
+        share the latest research in their local areas that spark conversations
+        in their communities.
+      </p>
+    </div>
+    <div class="linear_gradient_before_footer center">
+      <img src="./imgs/gradient_img.png" alt="bye" />
+    </div>
+    <footer class="py-3 py-md-4">
+      <div class="container row m-0">
+        <div class="col col-md-8 d-flex">
+          <img src="./imgs/TEDx_Sharkya_Logo.png" alt="Logo" class="logo" />
+          <span class="description"
+            >TEDxyouthSharkya STEM is an independent organized TED-Event that
+            aims to share new ideas with you.</span
+          >
+          <div class="row links" id="contact">
+            <a
+              href="https://www.facebook.com/TedxSharkya/"
+              target="_blank"
+              class="img-fluid mx-2"
+            >
+              <img src="./imgs/facebook.png" alt="facebook" />
+            </a>
+            <a
+              href="https://instagram.com/tedxyouth_sharkya_stem?igshid=YmMyMTA2M2Y="
+              target="_blank"
+              class="img-fluid mx-2"
+            >
+              <img src="./imgs/instagram.png" alt="instagram" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/tedxyouth-sharkya-stem/"
+              target="_blank"
+              class="img-fluid mx-2"
+            >
+              <img src="./imgs/linkedin.png" alt="linkedin" />
+            </a>
+          </div>
+        </div>
+        <div class="col-md-2 d-none d-md-flex about-us">
+          <h3 class="mb-3">About us</h3>
+          <ul>
+            <li>coming soon...</li>
+          </ul>
+        </div>
+        <div class="col-md-2 d-none d-md-flex join-us">
+          <h3 class="mb-3">Join us</h3>
+          <ul>
+            <li>coming soon...</li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <hr />
+          <p class="capitalize">
+            made with <img src="./imgs/red_heart.png" alt="" />.. all
+            copyrights&copy;are reserved || 2022
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

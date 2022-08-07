@@ -1,0 +1,80 @@
+@import "../helpers/mixins.scss";
+/*start styling the videos and tickets section*/
+.vidoes_and_ticket {
+  background-color: var(--bg-color);
+}
+span.header-text {
+  @include underline;
+  color: var(--text-color);
+  &::before {
+    background-color: var(--red-color);
+  }
+}
+
+#videos {
+  width: 100%;
+  @include centeringWithFlex();
+  font-weight: medium;
+  overflow-x: hidden;
+  img {
+    width: 200px;
+  }
+  .subtitle {
+    color: var(--gray-text-color);
+    font-size: 25px;
+  }
+  .speaker {
+    position: relative;
+    overflow-x: hidden;
+    margin-bottom: 10px !important;
+    &:hover span {
+      height: 100%;
+    }
+    span {
+      position: absolute;
+      @include centeringWithFlex();
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background-color: var(--bloody-red);
+      color: rgba(246, 221, 221, 0.9);
+      transition: 0.25s;
+      cursor: pointer;
+    }
+  }
+}
+
+.tickets-section {
+  @include centeringWithFlex();
+  height: 400px;
+  font-size: 17pt;
+  clip-path: polygon(50% 10%, 100% 0, 100% 60%, 50% 100%, 0 60%, 0 0);
+  background: var(--ticket-bg);
+  padding: 60px 0;
+  .tickets-text {
+    color: var(--text-color);
+  }
+  img {
+    padding-top: 20px;
+    width: 120px;
+  }
+  button {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 17pt;
+    padding: 10px 55px;
+    margin-top: 2rem;
+    transition: 0.25s;
+    cursor: pointer;
+    &:hover {
+      color: var(--bg-color);
+      background-color: var(--text-color);
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+/*end styling the videos and tickets section*/
